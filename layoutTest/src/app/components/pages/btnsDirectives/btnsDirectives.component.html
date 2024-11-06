@@ -1,0 +1,12 @@
+<div class="content">
+
+  <div class="btns-directives">
+    <button class="btn" (click)="btnCtrlD()" appKeyboardShortcut KeyboardShortcut="ctrl+d" [shortcutAction]="btnCtrlD" #btn>Ctrl+d con directiva</button>
+    <button class="btn" (click)="btnCtrlAltC()" appKeyboardShortcut KeyboardShortcut="ctrl+alt+c" [shortcutAction]="btnCtrlAltC" #btn>Ctrl+alt+c con directiva</button>
+  </div>
+  <div class="btns">
+    <button class="btn" (click)="btnCtrlA()" #btnctrla>ctrl+a</button>
+    <button class="btn" (click)="btnCtrlB()" #btnctrlb>ctrl+b</button>
+  </div>
+
+</div>
