@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+/* Reset básico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif; /* Cambia si necesitas otra fuente */
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased; /* Suaviza las fuentes en Safari y otros navegadores */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+button, input, select, textarea {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}

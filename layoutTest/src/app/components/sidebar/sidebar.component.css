@@ -1,0 +1,52 @@
+/* Estilo general de la barra lateral */
+.sidebar {
+    width: 100%; /* Ancho comprimido */
+    max-width: 300px; /* Ancho máximo del sidebar */
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    overflow: hidden;
+    position: sticky;
+    top: 0; /* Fijar el sidebar al borde superior */
+    
+}
+
+
+/* Expande la barra lateral al hacer hover */
+.sidebar:hover {
+    width: 200px; /* Ancho expandido */
+}
+
+/* Estilos de los enlaces */
+.sidebar-title {
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    display: none; /* Ocultar título en vista comprimida */
+}
+
+.sidebar:hover .sidebar-title {
+    display: block; /* Mostrar título cuando esté expandida */
+}
+
+.sidebar-nav {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.nav-link {
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    background-color: #555;
+}
