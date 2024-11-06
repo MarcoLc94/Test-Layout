@@ -6,9 +6,9 @@
     background-color: #333;
     color: #FFF;
     position: static;
-    width: 80%;
-    max-width: 80%;
+    width: 100%;
     box-sizing: border-box;
+    min-height: 57px;
   }
 
   .header-title {

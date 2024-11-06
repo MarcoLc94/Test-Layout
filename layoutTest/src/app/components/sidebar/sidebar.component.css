@@ -8,27 +8,21 @@
     overflow: hidden;
     position: sticky;
     top: 0; /* Fijar el sidebar al borde superior */
-    
+    box-sizing: border-box;
 }
 
 
 /* Expande la barra lateral al hacer hover */
-.sidebar:hover {
-    width: 200px; /* Ancho expandido */
-}
+
 
 /* Estilos de los enlaces */
 .sidebar-title {
     padding: 20px;
     font-size: 18px;
     text-align: center;
-    margin: 0;
-    display: none; /* Ocultar título en vista comprimida */
+    margin: 0;/* Ocultar título en vista comprimida */
 }
 
-.sidebar:hover .sidebar-title {
-    display: block; /* Mostrar título cuando esté expandida */
-}
 
 .sidebar-nav {
     text-align: center;
@@ -49,4 +43,26 @@
 
 .nav-link:hover {
     background-color: #555;
+}
+
+@media(max-width: 500px) {
+    .sidebar {
+        height: 10vh;
+        min-height: 57px;
+        position: sticky;
+
+        .sidebar-nav {
+            display: none;
+        }
+    }
+
+    .sidebar:hover {
+        max-width: 300px; /* Ancho expandido */
+    }
+}
+
+@media (width > 500px){
+    .sidebar:hover {
+        width: 200px; /* Ancho expandido */
+    }
 }
