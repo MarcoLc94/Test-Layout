@@ -4,7 +4,7 @@
 
     <input type="text" style="border: solid;" >
     <div>
-      <app-button class="btn" appTapindex tabIndex="0" appKeyboardShortcut KeyboardShortcut="ctrl+d" [shortcutAction]="btnCtrlD" tabindex="-1">Ctrl+d con directiva y botón personalizado</app-button>
+      <app-button class="btn" appTapindex tabIndex="0" tabindex="-1">Ctrl+d con directiva y botón personalizado</app-button>
     </div>
     <app-button class="btn" appTapindex tabIndex="1" tabindex="-1">Ctrl+d con directiva y botón personalizado</app-button>
     <app-button class="btn" appTapindex tabIndex="2" tabindex="-1">Ctrl+d con directiva y botón personalizado</app-button>
@@ -15,8 +15,8 @@
     <!-- <button class="btn" (click)="btnCtrlAltC()" appKeyboardShortcut KeyboardShortcut="ctrl+alt+c" [shortcutAction]="btnCtrlAltC" #btn>Ctrl+alt+c con directiva</button> -->
   </div>
   <div class="btns">
-    <button class="btn" (click)="btnCtrlA()" #btnctrla>ctrl+a</button>
-    <button class="btn" (click)="btnCtrlB()" #btnctrlb>ctrl+b</button>
+    <button class="btn" #btnctrla>ctrl+a</button>
+    <button class="btn" #btnctrlb>ctrl+b</button>
   </div>
 
 </div>

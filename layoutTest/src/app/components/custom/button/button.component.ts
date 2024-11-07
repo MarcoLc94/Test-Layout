@@ -19,7 +19,6 @@ export class ButtonComponent {
 
   btnCtrlD(){
     alert("Botón Ctrl+d con directiva")
-    console.log("boton 2")
   }
 
 }

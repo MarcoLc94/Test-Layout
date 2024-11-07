@@ -32,9 +32,9 @@ img, picture, video, canvas, svg {
     max-width: 100%;
 }
 
-button, input, select, textarea {
+/* button, input, select, textarea {
     font: inherit;
     border: none;
     background: none;
     outline: none;
-}
+} */
