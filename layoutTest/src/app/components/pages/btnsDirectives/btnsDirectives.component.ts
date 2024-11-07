@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { KeyboardShortcutDirective } from '../../../directives/KeyboardShortcut.directive';
+import { ButtonComponent } from '../../custom/button/button.component';
 
 @Component({
   selector: 'app-btns-directives',
   standalone: true,
   imports: [
-    CommonModule, KeyboardShortcutDirective
+    CommonModule, KeyboardShortcutDirective, ButtonComponent
   ],
   templateUrl: './btnsDirectives.component.html',
   styleUrl: './btnsDirectives.component.css',
@@ -41,8 +42,8 @@ export class BtnsDirectivesComponent {
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
 
+    // alert(event.key)
     if (event.ctrlKey && event.key === "a") {
-      event.preventDefault();
       this.btnCtrla.nativeElement.click();
 
     } else if(event.ctrlKey && event.key === "b"){
