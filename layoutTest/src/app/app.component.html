@@ -8,28 +8,30 @@
     </div>
     <div class="main-container">
       <router-outlet />
-      <div style="display: flex;">
-        <input 
+      <div class="main-container">
+        <router-outlet />
+        <div style="display: flex;">
+          <input 
+            type="text" 
+            style="border: 1px solid black;"
+            tabindex="0"
+            (click)="focusOnInput($event)"
+            #inputElement
+          >
+          <app-dropdown2
+          [options]="dropdownOptions"
+          placeholder="Select an option"
+          (selectionChange)="onOptionSelected($event)"
+        >
+        </app-dropdown2>
+          <input 
           type="text" 
           style="border: 1px solid black;"
           tabindex="0"
           (click)="focusOnInput($event)"
           #inputElement
         >
-        <app-dropdown 
-        [options]="dropdownOptions"
-        placeholder="Select a country"
-        [initialValue]="'us'"
-        (selectionChange)="onSelectionChange($event)"
-      ></app-dropdown>
-        <input 
-        type="text" 
-        style="border: 1px solid black;"
-        tabindex="0"
-        (click)="focusOnInput($event)"
-        #inputElement
-      >
-      </div>
+        </div>
       
 <br>
 <br>

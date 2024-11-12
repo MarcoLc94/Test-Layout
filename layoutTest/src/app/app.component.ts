@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FormsModule } from '@angular/forms';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { DropdownComponent2 } from './components/dropdown2/dropdown2.component';
 
 const width = window.innerWidth
   console.log(width)
@@ -11,7 +12,7 @@ const width = window.innerWidth
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, SidebarComponent, FormsModule, DropdownComponent],
+  imports: [RouterOutlet, HeaderComponent, SidebarComponent, FormsModule, DropdownComponent, DropdownComponent2],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -50,16 +51,20 @@ export class AppComponent {
     this.city = ""
   }
 
-  dropdownOptions = [
-    { value: 'us', label: 'United States' },
-    { value: 'uk', label: 'United Kingdom' },
-    { value: 'fr', label: 'France' },
-    { value: 'de', label: 'Germany' },
-    { value: 'es', label: 'Spain' }
-  ];
+
 
   onSelectionChange(value: any) {
     console.log('Selected value:', value);
+  }
+
+  dropdownOptions = [
+    { value: '1', label: 'Option 1' },
+    { value: '2', label: 'Option 2' },
+    { value: '3', label: 'Option 3' }
+  ];
+
+  onOptionSelected(event: any) {
+    console.log('Selected option:', event);
   }
 
   focusOnInput(event: Event): void {
