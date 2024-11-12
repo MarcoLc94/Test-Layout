@@ -8,6 +8,53 @@
     </div>
     <div class="main-container">
       <router-outlet />
+      <div style="display: flex;">
+        <input 
+          type="text" 
+          style="border: 1px solid black;"
+          tabindex="0"
+          (click)="focusOnInput($event)"
+          #inputElement
+        >
+        <app-dropdown 
+        [options]="dropdownOptions"
+        placeholder="Select a country"
+        [initialValue]="'us'"
+        (selectionChange)="onSelectionChange($event)"
+      ></app-dropdown>
+        <input 
+        type="text" 
+        style="border: 1px solid black;"
+        tabindex="0"
+        (click)="focusOnInput($event)"
+        #inputElement
+      >
+      </div>
+      
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
     </div>
+    
+    <div>
+      <h1>My cities</h1>
+      <ul>
+
+        @for (city of cities; track $index) {
+          <li>{{city}}</li>
+        }
+      </ul>
+    </div>
+    <form (ngSubmit)="addCity()">
+      <input type="text" [(ngModel)]="city" name="city">
+      <button type="submit">Add city</button>
+    </form>
   </div>
 </div>
+

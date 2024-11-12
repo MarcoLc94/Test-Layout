@@ -21,6 +21,12 @@
     font-size: 18px;
     text-align: center;
     margin: 0;/* Ocultar título en vista comprimida */
+    min-height: 68px;
+
+    :hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
 }
 
 

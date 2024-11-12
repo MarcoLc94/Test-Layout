@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  isOpen = false
+
+  openModal = () => {
+    this.isOpen = !this.isOpen
+    console.log(this.isOpen)
+  }
 }

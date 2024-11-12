@@ -1,16 +1,16 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     padding: 1rem;
     background-color: #333;
     color: #FFF;
     position: static;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
     min-height: 57px;
   }
-
+  
   .header-title {
     margin: 0;
   }
@@ -22,6 +22,29 @@
     color: #FFF;
     text-decoration: none;
   }
+  
   .nav-link:hover {
     text-decoration: underline;
   }
+  
+  /* Media queries */
+  
+  @media (max-width: 500px) {
+    .header {
+      width: 100%;
+    }
+
+  }
+  
+  @media (min-width: 500px) and (max-width: 700px) {
+    .header {
+      width: 78%;
+    }
+  }
+  
+  @media (min-width: 700px) and (max-width: 1000px) {
+    .header {
+      width: 80%;
+    }
+  }
+  
